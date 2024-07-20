@@ -1,0 +1,501 @@
+:root {
+  --primary: rgb(100, 83, 28);
+  --bg: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  background-color: var(--bg);
+  color: antiquewhite;
+}
+/* DESKTOP VIEW */
+/* ----------NAVBAR-- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(0, 0, 0, 0.959);
+  border-bottom: 0.3px solid rgba(51, 40, 24, .8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  color: rgb(255, 255, 255);
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 0.9rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.1rem;
+  border-bottom: 0.1rem solid rgb(59, 49, 21);
+  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+  -webkit-transform: scaleX(0.5);
+  -moz-transform: scaleX(0.5);
+  -ms-transform: scaleX(0.5);
+  -o-transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: white;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+/* END NAVBAR */
+
+/* Hero Section Start*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(galleryAsset/bg-4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 9%,
+    rgba(255, 255, 255, 0) 55%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: #ffff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.6);
+  line-height: 1.2;
+}
+.hero .content h1 span {
+  color: rgb(77, 64, 22);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 250;
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 0.6);
+  mix-blend-mode: difference;
+}
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+/*Hero Section END// */
+
+/* About Section START */
+.about {
+  padding: 8rem 7% 1.4rem;
+  margin-bottom: 10rem;
+}
+
+.about h2 ,
+.menu h2 ,
+.contact h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2  span ,
+.contact h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 38rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+  font-weight: 100;
+  line-height: 1.5;
+  font-style: italic;
+}
+/* About Section END */
+
+/* MENU Section Start */
+.menu{
+  padding: 6rem 7% 1.4rem;
+
+}
+.menu h2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.menu p ,
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: 200;
+}
+
+.menu .row {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.menu .row .menu-card img {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 60%;
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin-top: .7rem auto .5rem;
+}
+
+/* MENU Section end */
+
+
+/* CONTACT Section Start */
+
+.contact{
+  padding: 6rem 7% 1.4rem;
+}
+
+.contact h2{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color:  rgba(34, 31, 31, 0.61);
+}
+
+.contact .row .maps {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.contact .row form .input-group {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contact .row form .input-group input {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.7rem;
+  background: none ;
+  color: #ffffff;
+}
+
+.contact .row form .btn{
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+/* CONTACT Section  End!!*/
+
+/* footer start */
+
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: .8rem;
+}
+
+footer .credit a {
+  color: rgb(31, 24, 13);
+  font-weight: 700;
+}
+
+/* footer end */
+
+
+
+/* MEDIA QUERIES */
+/* LAPTOP!! */
+@media (max-width: 1366px) {
+  html {
+    font-size: 70%;
+  }
+  .menu .row .menu-card img {
+    width: 50%;
+  }
+  .menu .row {
+    flex-wrap: wrap;
+  }
+}
+/* TABLET!! */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  /*- - - - - - slider hamburger-menu- - - - - -   */
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(255, 255, 255, 0.568);
+    width: 20rem;
+    height: 100vh;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+  
+  .active {
+    right: 0px !important;
+  }
+  
+  .navbar .navbar-nav a {
+    color: black;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+    -webkit-transform: scaleX(0.2);
+    -moz-transform: scaleX(0.2);
+    -ms-transform: scaleX(0.2);
+    -o-transform: scaleX(0.2);
+    
+  }
+  /*- - about - - */
+  .about .row{
+    flex-wrap: wrap;
+  }
+    
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  .about .row .content {
+    padding: 0;
+  }
+  
+  .about .row .content h3{
+    font-size: 2rem;
+    margin-top: .8rem;
+  }
+  .about .row .content p{
+    font-size: 1.5rem;
+  }
+
+  /* menu */
+
+  .menu p {
+    font-size: 1.2rem;
+  }
+  /* contact */
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .maps{
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+}
+/* MOBILE PHONE! */
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .menu .row .menu-card img {
+    width: 80%;
+  }
+
+  .menu h2 {
+   font-size: 4em;
+  }  
+
+  .menu .row .menu-card .menu-card-title {
+    font-size: 2rem;
+  }
+
+  .menu .row .menu-card .menu-card-price {
+    font-size: 1.4rem;
+  }
+
+  .menu .row {
+    display: grid;
+    grid-template-columns: auto auto;
+    
+  }
+  /* .menu .row .menu-card {
+    padding-bottom: 3rem;
+    width: 30rem;
+  } */
+}
